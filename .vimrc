@@ -15,3 +15,8 @@ set softtabstop=2   " Sets the number of columns for a TAB.
 set expandtab       " Expand TABs to spaces.
 
 autocmd FileType ruby compiler ruby
+
+" keyboard shortcut
+let mapleader=","
+nmap <Leader>n :NERDTreeToggle<CR>
+nmap <Leader>w <C-w><C-w>
