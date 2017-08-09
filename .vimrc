@@ -1,4 +1,4 @@
-" https://github.com/tpope/vim-pathogen
+"https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 
 set number
@@ -16,7 +16,18 @@ set expandtab       " Expand TABs to spaces.
 
 autocmd FileType ruby compiler ruby
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " keyboard shortcut
 let mapleader=","
 nmap <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>w <C-w><C-w>
+
+set noswapfile
