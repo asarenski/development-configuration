@@ -1,4 +1,27 @@
-"https://github.com/tpope/vim-pathogen
+" GET
+"
+" package management
+" https://github.com/tpope/vim-pathogen
+"
+" syntax checking on write
+" https://github.com/vim-syntastic/syntastic
+"
+" fuzzy finding
+" https://github.com/ctrlpvim/ctrlp.vim
+"
+" edit and compile ruby in vim
+" https://github.com/vim-ruby/vim-ruby
+"
+" code completion helper
+" https://github.com/Valloric/YouCompleteMe
+"
+" status/tabline helper
+" https://github.com/vim-airline/vim-airline
+" 
+" file navigation
+" https://github.com/scrooloose/nerdtree
+"
+
 execute pathogen#infect()
 
 set number
@@ -20,10 +43,15 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" syntastic
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" ctrlp fuzzy finder
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 " keyboard shortcut
 let mapleader=","
